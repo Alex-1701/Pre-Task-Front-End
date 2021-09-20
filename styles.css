@@ -1,0 +1,127 @@
+body {
+  font-family: Noto Sans, sans-serif;
+  font-size: 20pt;
+  color: black;
+  font-size: 12pt;
+  background-color: rgb(205, 231, 230);
+  transition-duration: 0.3s;
+}
+
+body.dark-theme {
+  color: #eeeeee;
+  background: #333333;
+}
+
+body.dark-theme input {
+  color: #eeeeee;
+  background-color: #121212;
+  border: 2px solid gray;
+  transition-duration: 0.3s;
+}
+
+/* Включить для отладки вёрстки*/
+/*div {
+  border: 3px dashed red;
+}*/
+
+#main_form_box {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center; 
+  align-items: center; 
+  margin: auto;
+}
+
+.form_input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.text_input {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+  width: 45%;
+  min-width: 200px;
+}
+
+input {
+  width: 45%;
+  min-width: 200px;
+  background-color: white;
+  /*background-color: inherit;*/
+}
+
+input:focus {
+  outline:black;
+  border: 2px solid black;
+}
+
+body.dark-theme input:focus {
+  outline:blue;
+  border: 2px solid blue;
+}
+
+#submit_button {
+  background-color: rgb(143, 143, 143);
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid gray;
+  transition-duration: 0.2s;
+}
+
+#submit_button:hover {
+  /*background-color: rgb(0, 221, 118);*/
+  background-color: #00ff33;
+  transition-duration: 0.2s;
+}
+
+body.dark-theme #submit_button:hover {
+  background-color: rgb(255, 166, 0);
+  border-color: black;
+}
+
+#submit_button_box {
+  display: flex;
+  justify-content: center;
+}
+
+#dark_theme_box {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  justify-content: right; 
+}
+
+#dark_theme_button {
+  color: black;
+  background-color: rgb(143, 143, 143);
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid gray;
+  transition-duration: 0.2s;
+}
+
+#dark_theme_button:hover {
+  color: #eeeeee;
+  background-color: black;
+  border-color: grey;
+}
+
+body.dark-theme #dark_theme_button {
+  /*color: #eeeeee;*/ /*вот этот цвет*/
+  color: black;
+  border-color: grey;
+}
+
+body.dark-theme #dark_theme_button:hover {
+  color: black;
+  background-color: #ffa400;
+  border-color: black;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Регистрация</title>
+</head>
+
+<body>
+
+    <!-- Кнопка смены цветовой темы -->
+    <div id="dark_theme_box">
+        <button id="dark_theme_button" onclick="swap_theme()" class="toggle_theme_button" tabindex="99"></button>
+    </div>
+
+
+    <div id="main_form_box">
+        <!-- Форма по клику вызывает функцию send_data() -->
+        <form id="main_form" onsubmit="return send_data(event)">
+            <!-- Поле ввода имени -->
+            <div class="form_input">
+                <label for="input_name">Введите имя</label>
+                <input type="text" name="name" id="input_name" class="text_input" placeholder="user_name" minlength="3"
+                    maxlength="50" title="Придумайте имя под которым вы будете входть в систему" required tabindex="1">
+            </div>
+
+            <!-- Поле ввода пароля -->
+            <div class="form_input">
+                <label for="input_password">Введите пароль</label>
+                <input type="password" name="password" id="input_password" class="text_input"
+                    placeholder="user_password" minlength="5" maxlength="50"
+                    title="Придумайте уникальный пароль который вы будете использовать для входа в систему" tabindex="2"
+                    required>
+            </div>
+
+            <!-- Поле проверки пароля -->
+            <div class="form_input">
+                <label for="input_password_repeat">Повторите пароль</label>
+                <input type="password" name="password" id="input_password_repeat" class="text_input"
+                    placeholder="user_password" minlength="5" maxlength="50" title="Повторите свой пароль" tabindex="3"
+                    required>
+            </div>
+
+            <!-- Поле ввода почты -->
+            <div class="form_input">
+                <label for="input_email">Введите email</label>
+                <input type="email" name="email" id="input_email" class="text_input" placeholder="user_name@example.com"
+                    title="Введите адрес электронноы почты который будет использован для верификации вашего аккаунта"
+                    required tabindex="4">
+            </div>
+
+            <!-- Кнопка отправки формы на сервер -->
+            <div class="form_input" id="submit_button_box">
+                <button id="submit_button" type="submit" tabindex="5">Зарегестрироваться</button>
+            </div>
+
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
